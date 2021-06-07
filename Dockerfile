@@ -1,5 +1,5 @@
 FROM nginx:stable-alpine
-ADD dist /usr/share/nginx/html
-ADD default.conf /etc/nginx/conf.d/
+COPY dist /usr/share/nginx/html
+RUN rm /etc/nginx/conf.d/default.conf
+COPY default.conf.conf /etc/nginx/conf.d
 EXPOSE 5000
-CMD ["sh", "-c", "nginx -g 'daemon off;'"]
