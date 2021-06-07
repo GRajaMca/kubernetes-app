@@ -1,0 +1,10 @@
+{
+  "/customer": {
+    "target": "http://localhost:9111",
+    "secure": false
+  },
+  "/user": {
+    "target": "http://localhost:9112",
+    "secure": false
+  }
+}
