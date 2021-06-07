@@ -21,10 +21,6 @@ spec:
           ports:
             - name: kubernetes-app
               containerPort: 5000
-          lifecycle:
-            preStop:
-              exec:
-                command: ["/usr/sbin/nginx","-s","quit"]
 ---
 apiVersion: v1
 kind: Service
